@@ -17,7 +17,12 @@ repositories {
 }
 
 dependencies {
-    compileOnly("com.hypixel.hytale:Server:2026.05.26-c68d7d0d7")
+    // The current Hytale Server jar (2026.05.26-c68d7d0d7 / Update 5) is not
+    // published to any public Maven repo, so compile against the server jar
+    // placed in the local `libs/` folder. Drop your server jar in there.
+    val hytaleServer = fileTree("libs") { include("*.jar") }
+
+    compileOnly(hytaleServer)
 
     implementation("com.h2database:h2:2.2.224")
     implementation("com.zaxxer:HikariCP:5.1.0")
@@ -25,7 +30,7 @@ dependencies {
 
     compileOnly("at.helpch:placeholderapi-hytale:1.0.4")
 
-    testImplementation("com.hypixel.hytale:Server:2026.05.26-c68d7d0d7")
+    testImplementation(hytaleServer)
     testImplementation(kotlin("test"))
     testImplementation("org.junit.jupiter:junit-jupiter:5.11.0")
     testImplementation("org.mockito.kotlin:mockito-kotlin:5.2.1")
