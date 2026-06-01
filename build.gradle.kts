@@ -10,6 +10,8 @@ val javaVersion = 25
 
 repositories {
     mavenCentral()
+    maven("https://maven.hytale.com/release")
+    maven("https://maven.hytalemodding.dev/releases")
     maven("https://repo.codemc.io/repository/hytale/")
     maven("https://repo.helpch.at/releases/")
 }
