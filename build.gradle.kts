@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "com.github.heroslender.herochat"
-version = "v1.7.1"
+version = "v1.7.2"
 
 val javaVersion = 25
 
@@ -15,7 +15,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly("com.hypixel.hytale:Server:2026.02.19-1a311a592")
+    compileOnly("com.hypixel.hytale:Server:2026.05.26-c68d7d0d7")
 
     implementation("com.h2database:h2:2.2.224")
     implementation("com.zaxxer:HikariCP:5.1.0")
@@ -23,7 +23,7 @@ dependencies {
 
     compileOnly("at.helpch:placeholderapi-hytale:1.0.4")
 
-    testImplementation("com.hypixel.hytale:Server:2026.02.19-1a311a592")
+    testImplementation("com.hypixel.hytale:Server:2026.05.26-c68d7d0d7")
     testImplementation(kotlin("test"))
     testImplementation("org.junit.jupiter:junit-jupiter:5.11.0")
     testImplementation("org.mockito.kotlin:mockito-kotlin:5.2.1")
