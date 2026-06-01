@@ -167,9 +167,10 @@ class StandardChannel(
             }
         }
 
+        val perm = permission
         recipients.removeIf { user ->
-            return@removeIf permission?.let { !user.hasPermission(it) } ?: false
-                    && user.settings.disabledChannels.contains(this.id)
+            (perm != null && !user.hasPermission(perm))
+                    || user.settings.disabledChannels.contains(this.id)
         }
 
         return recipients

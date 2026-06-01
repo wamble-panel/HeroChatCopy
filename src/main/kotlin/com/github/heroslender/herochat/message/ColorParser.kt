@@ -527,7 +527,7 @@ class ColorParser {
             newTopComp().insertAll(*parts)
 
             if (length % 2 == 1) {
-                val comp = Message.raw(buffer[length - 1].toString()).color(gradient.getColorAt(length, length))
+                val comp = Message.raw(buffer[length - 1].toString()).color(gradient.getColorAt(length / 2 - 1, length / 2))
                 topComp?.insert(comp)
             }
         }
