@@ -14,6 +14,6 @@
   "Description": "A chat plugin",
   "IncludesAssetPack": true,
   "OptionalDependencies": {
-    "HelpChat:PlaceholderAPI": ">= 1.0.2"
+    "HelpChat:PlaceholderAPI": ">=1.0.2"
   }
 }
